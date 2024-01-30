@@ -1,24 +1,24 @@
 <?php
 /*
-Plugin Name: Nijjwal WP Pro Quiz Score
-Plugin URI: http://nijjwal.com/plugins/wp-pro-quiz-score
-Description: This is a simple extension of wp-pro-quiz that displays each registered user score at the bottom of their profile. 
+Plugin Name: RashiMantra
+Plugin URI: https://rashimantra.com/
+Description: This is a simple extension of wp-avd-quiz that displays each registered user score at the bottom of their avdfile. 
 Version: 1.0
-Author: Nijjwal Shrestha
-Author URI: http://nijjwal.com
+Author: Souvik
+Author URI: https://rashimantra.com/
 */
 
 
 
-add_action('show_user_profile', 'nijjwal_wp_pro_quiz_result_function');
+add_action('show_user_avdfile', 'nijjwal_wp_avd_quiz_result_function');
 
-function nijjwal_wp_pro_quiz_result_function()
+function nijjwal_wp_avd_quiz_result_function()
 {
 	global $wpdb;
 
-	$tableA = $wpdb->prefix.'wp_pro_quiz_statistic_ref';
-	$tableB = $wpdb->prefix.'wp_pro_quiz_statistic';
-	$tableC = $wpdb->prefix.'wp_pro_quiz_master';
+	$tableA = $wpdb->prefix.'wp_avd_quiz_statistic_ref';
+	$tableB = $wpdb->prefix.'wp_avd_quiz_statistic';
+	$tableC = $wpdb->prefix.'wp_avd_quiz_master';
 	$currentUserId = get_current_user_id();
 
 
